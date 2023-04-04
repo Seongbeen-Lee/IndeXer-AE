@@ -4,6 +4,7 @@ AfterEffects 컴포지션 내에서 오디오 시퀀스들의 Track list를 생�
 <img width="542" alt="CleanShot 2023-04-04 at 20 31 52@2x" src="https://user-images.githubusercontent.com/60502718/229778665-05f73900-ab39-42b8-822e-193916b9510a.png">
 
 ## 설치
+0. 현재 화면에서 우측 상단 'Code' 버튼을 클릭하고, 최하단 Download ZIP을 클릭하여 다운로드 후 압축 해제합니다.
 1. After Effects를 실행합니다.
 2. 파일 > 스크립트 > 스크립트 파일 설치...
 3. 다운로드한 indexerAE.jsx 파일을 선택합니다.
