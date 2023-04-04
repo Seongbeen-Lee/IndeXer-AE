@@ -42,7 +42,7 @@
       var layer = comp.layer(i);
       if (layer.hasAudio && layer.audioEnabled) {
         var title = removeFileExtension(layer.name);
-        var startTime = formatTimecode(layer.startTime);
+        var startTime = formatTimecode(layer.inPoint); // modified line
         audioSequences.push({ timecode: startTime, title: title });
       }
     }
