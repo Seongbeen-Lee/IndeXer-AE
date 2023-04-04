@@ -58,7 +58,7 @@
     dlg.orientation = "column";
     dlg.alignChildren = "center";
 
-    dlg.add("statictext", undefined, "데이터 미리보기:");
+    // dlg.add("statictext", undefined, "데이터 미리보기:");
     var listBox = dlg.add("listbox", [0, 0, 400, 300]);
     for (var j = 0; j < audioSequences.length; j++) {
       var item = listBox.add(
@@ -67,7 +67,7 @@
       );
     }
 
-    dlg.add("statictext", undefined, "파일 형식을 지정해주세요:");
+    // dlg.add("statictext", undefined, "파일 형식을 지정해주세요:");
     var formatGroup = dlg.add("group");
     formatGroup.orientation = "row";
     formatGroup.add("statictext", undefined, "파일 형식:");
@@ -83,6 +83,14 @@
     var cancelButton = buttonGroup.add("button", undefined, "취소");
     buttonGroup.alignment = ["right", "bottom"];
 
+    // Add created by text
+    var createdByText = dlg.add(
+      "statictext",
+      undefined,
+      "created by Seongbeen Lee / dltjdqls@icloud.com"
+    );
+    createdByText.alignment = ["center", "bottom"];
+
     // Button callbacks
     okButton.onClick = function () {
       var extension = jsonRadio.value ? "json" : "txt";
@@ -97,7 +105,7 @@
         }
 
         var outputText = jsonRadio.value
-          ? JSON.stringify(audioSequences)
+          ? JSON.stringify(audioSequences, null, 2) // modified line
           : createTextFile(audioSequences);
         outputFile.open("w");
         outputFile.write(outputText);
